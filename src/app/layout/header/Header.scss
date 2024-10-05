@@ -1,0 +1,12 @@
+@use '../../../data/constants/Colors.scss' as vars;
+
+#header {
+    background-color: vars.$vilv-lightblue;
+    min-height: 7em;
+    max-height: 7em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100vw);
+    padding: 1em;
+}

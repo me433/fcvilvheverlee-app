@@ -1,0 +1,8 @@
+th, td {
+    text-align: left;
+    padding-bottom: 0.5em;
+}
+
+th {
+    padding-right: 2em;
+}

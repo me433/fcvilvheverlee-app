@@ -1,0 +1,5 @@
+#stats-container {
+    display: flex;
+    height: 5em;
+    align-items: center;
+}

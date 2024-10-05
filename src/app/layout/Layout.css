@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+
+main {
+    max-width: calc(100vw - 12.5em);
+    padding: 1em;
+}

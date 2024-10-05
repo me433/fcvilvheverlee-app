@@ -1,0 +1,37 @@
+@use '../../../data/constants/Colors.scss' as vars;
+
+#nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.5em;
+    min-width: 12.5em;
+    max-width: 12.5em;
+
+    background: linear-gradient(180deg, vars.$vilv-lightblue, white);;
+}
+
+.route {
+    text-decoration: none;
+    color: black;
+}
+
+.sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.5em;
+}
+
+.image {
+    width: 10.5em;
+}
+
+.sponsornav {
+    display: block;
+    max-width:10.5em;
+    max-height:10.5em;
+    width: auto;
+    height: auto;
+}

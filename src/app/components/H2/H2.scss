@@ -1,0 +1,8 @@
+@use '../../../data/constants/Colors.scss' as vars;
+
+h2 {
+    color: vars.$vilv-blue;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}

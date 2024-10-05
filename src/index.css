@@ -1,0 +1,22 @@
+* {
+  font-family: Inter, sans-serif;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  color: #444;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
