@@ -14,7 +14,6 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
   const [dialog, setDialog] = useState(false);
   
   const { auth, setAuth } = useAuth();
@@ -36,7 +35,6 @@ const Login = () => {
       const roles = res?.data?.roles;
       console.log({ user, roles, accessToken })
       setAuth({ user, roles, accessToken })
-      setLoggedIn(true)
       setDialog(false)
     })
     .catch((err) => {
@@ -51,7 +49,7 @@ const Login = () => {
     .then((res) => {
       console.log(res)
       if (res.status == 204) {
-        setLoggedIn(false)
+        //delete cookies
       };
     })
     .catch((err) => {
