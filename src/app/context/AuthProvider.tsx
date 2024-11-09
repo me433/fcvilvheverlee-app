@@ -1,8 +1,8 @@
 import { createContext, useState, ReactNode } from "react";
 
 interface AuthContextType {
-    auth: { [key: string]: any };
-    setAuth: React.Dispatch<React.SetStateAction<{ [key: string]: any }>>;
+    auth: { [key: string]: any } | null;
+    setAuth: React.Dispatch<React.SetStateAction<{ [key: string]: any } | null>>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -12,7 +12,7 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-    const [auth, setAuth] = useState<{ [key: string]: any }>({});
+    const [auth, setAuth] = useState<{ [key: string]: any } | null>(null);
 
     return (
         <AuthContext.Provider value={{ auth, setAuth }}>

@@ -1,6 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import './Login.scss';
-import H2 from '../H2/H2';
 import { useState } from 'react';
 import axios from '../../../api/axios';
 import useAuth from '../../hooks/useAuth';
@@ -49,7 +48,8 @@ const Login = () => {
     .then((res) => {
       console.log(res)
       if (res.status == 204) {
-        //delete cookies
+        //clear auth, server deletes cookie
+        setAuth(null)
       };
     })
     .catch((err) => {
@@ -68,8 +68,8 @@ const Login = () => {
     }
     <Dialog.Portal>
       <Dialog.Overlay className="DialogOverlay" />
-      <Dialog.Content className="DialogContent">
-        <Dialog.Title className="DialogTitle"><H2 title="Inloggen" /></Dialog.Title>
+      <Dialog.Content className="DialogContent" >
+        <Dialog.Title className="DialogTitle" style={{fontWeight: 'bold', color: '#32329f'}}>Inloggen</Dialog.Title>
         <form onSubmit={(e) => handleLogin(e, {username, password})}>
         <fieldset className="Fieldset">
           <label className="Label" htmlFor="username">

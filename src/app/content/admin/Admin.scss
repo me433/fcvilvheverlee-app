@@ -1,0 +1,23 @@
+@use '../../../data/constants/Colors.scss' as vars;
+
+#action {
+    text-align: center;
+    width: max-content;
+    padding-left: 2em;
+    padding-right: 2em;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+#action:hover {
+    stroke: vars.$vilv-blue;
+    stroke-width: 1px;
+}
+
+#addPlayer {
+    color: white;
+    background-color: vars.$vilv-blue;
+    border: 1px solid vars.$vilv-blue;
+    padding: 0.5em;
+    border-radius: 2em;
+}

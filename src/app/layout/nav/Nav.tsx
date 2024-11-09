@@ -16,6 +16,8 @@ const Nav = () => {
         </a>
       ))}
       <br />
+      {auth?.roles?.includes("user")?
+      <>
       <H2 title="Sportief"/>
       {StatisticsRoutes.map((route) => (
         <a key={route.name} href={route.href} className='route'>
@@ -23,8 +25,6 @@ const Nav = () => {
         </a>
       ))}
       <br />
-      {auth?.roles?.includes("user")?
-      <>
       <H2 title="Aanwezigheden"/>
       {MemberRoutes.map((route) => (
         <a key={route.name} href={route.href} className='route'>

@@ -1,16 +1,12 @@
 import H1 from "../../components/H1/H1"
-import useAuth from "../../hooks/useAuth"
 
 const mgmt: {function: string, name: string}[] = [{function: "Aanspreekpunt Persoonlijke Integriteit", name: "Wouter Van De Walle"}] 
 
 const Clubapi = () => {
-  const { auth } = useAuth();
-
 
   return (
     <>
     <H1 title="Club-API" />
-    <button onClick={() => {console.log(auth)}}>Print auth</button>
     <table>
       <tbody>
         {mgmt.map((person) => (
