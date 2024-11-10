@@ -29,10 +29,9 @@ const Login = () => {
       }
     )
     .then((res) => {
-      console.log(res)
       const accessToken = res?.data?.accessToken;
       const roles = res?.data?.roles;
-      console.log({ user, roles, accessToken })
+
       setAuth({ user, roles, accessToken })
       setDialog(false)
     })
@@ -46,7 +45,6 @@ const Login = () => {
       withCredentials: true
     })
     .then((res) => {
-      console.log(res)
       if (res.status == 204) {
         //clear auth, server deletes cookie
         setAuth(null)

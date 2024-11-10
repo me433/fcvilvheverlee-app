@@ -2,9 +2,10 @@
 
 #action {
     text-align: center;
+    justify-content: center;
     width: max-content;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     stroke: black;
     stroke-width: 0.5px;
 }
@@ -20,4 +21,10 @@
     border: 1px solid vars.$vilv-blue;
     padding: 0.5em;
     border-radius: 2em;
+    margin-bottom: 1em;
+}
+
+td {
+    width: fit-content;
+    padding-right: 1em;
 }
