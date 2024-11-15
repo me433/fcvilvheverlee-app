@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import H1 from "../../components/H1/H1"
 import './Admin.scss'
-import { axiosPrivate } from "../../../api/axios"
 import * as Dialog from '@radix-ui/react-dialog';
 import DeleteUser from "./deleteUser/DeleteUser";
 import { Player, User } from "../../../data/constants/Types";
 import Toggle from "./toggle/Toggle";
+import useAxiosPrivate from "../../../api/useAxiosPrivate";
 
 const Admin = () => {
     const emptyPlayer: Player = {username: "", password: "", email: "", firstName: "", lastName:""}
     const [users, setUsers] = useState<User[]>([])
     const [dialog, setDialog] = useState(false);
     const [newPlayer, setNewPlayer] = useState<Player>(emptyPlayer)
+    const axiosPrivate = useAxiosPrivate();
 
     useEffect(() => {
         const fetchUsers = async () => {

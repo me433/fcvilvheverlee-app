@@ -1,12 +1,13 @@
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
-import { axiosPrivate } from "../../../../api/axios";
 import { User } from "../../../../data/constants/Types";
 import './DeleteUser.scss'
 import { useState } from "react";
+import useAxiosPrivate from "../../../../api/useAxiosPrivate";
 
 
 const DeleteUser: React.FC<{setUsers: React.Dispatch<React.SetStateAction<User[]>>, id: string}> = ({ id, setUsers }) => {
     const [dialog, setDialog] = useState(false);
+	const axiosPrivate = useAxiosPrivate();
 
     const handleDelete = (id: string) => {
         axiosPrivate.delete('./users',
