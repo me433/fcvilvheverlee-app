@@ -19,15 +19,12 @@ const Login = () => {
 
   const handleLogin = (e: any, user: User) => {
     e.preventDefault()
-    axios.post('/login',
-      {
-        user: user.username,
-        pwd: user.password
-      },
-      {
-        withCredentials: true
+    axios.post('/login', {}, {
+      auth: {
+        username: user.username,
+        password: user.password
       }
-    )
+  })
     .then((res) => {
       const accessToken = res?.data?.accessToken;
       const roles = res?.data?.roles;
